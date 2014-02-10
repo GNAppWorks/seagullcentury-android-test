@@ -1,35 +1,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/titleBar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sgcLogo"
     android:gravity="left"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignLeft="@+id/campusMapButton"
+        android:layout_alignParentBottom="true"
+        android:background="#ff8D8D8D"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp" >
 
-    <TextView
-        android:id="@+id/joshTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:text="@string/josh" />
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/homeButtonLabel" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/robTextView"
+    <Button
+        android:id="@+id/courseMapButton"
+        style="@style/AppTheme"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:onClick="onCourseMapButtonClicked"
+        android:text="@string/courseMapButtonLabel" />
+
+    <Button
+        android:id="@+id/vendorButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/joshTextView"
-        android:text="@string/rob" />
-    
-    
+        android:layout_above="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="116dp"
+        android:text="@string/vendorButtonLabel" />
+
+    <Button
+        android:id="@+id/campusMapButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/courseMapButton"
+        android:layout_below="@+id/courseMapButton"
+        android:text="@string/campusMapButtonLabel" />
+
 </RelativeLayout>
