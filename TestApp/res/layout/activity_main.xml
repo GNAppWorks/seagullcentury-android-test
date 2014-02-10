@@ -24,18 +24,11 @@
         <Button
             android:id="@+id/homeButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
+            android:background="@drawable/sgclogo"
             android:text="@string/homeButtonLabel" />
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/courseMapButton"
-        style="@style/AppTheme"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_alignParentRight="true"
-        android:onClick="onCourseMapButtonClicked"
-        android:text="@string/courseMapButtonLabel" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/vendorButton"
@@ -43,8 +36,20 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="65dp"
         android:text="@string/vendorButtonLabel" />
+
+    <Button
+        android:id="@+id/courseMapButton"
+        style="@style/AppTheme"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/map_button_image"
+        android:onClick="onCourseMapButtonClicked"
+        android:text="@string/courseMapButtonLabel" />
 
     <Button
         android:id="@+id/campusMapButton"
@@ -52,6 +57,7 @@
         android:layout_height="50dp"
         android:layout_alignLeft="@+id/courseMapButton"
         android:layout_below="@+id/courseMapButton"
+        android:layout_marginTop="22dp"
         android:text="@string/campusMapButtonLabel" />
 
 </RelativeLayout>
